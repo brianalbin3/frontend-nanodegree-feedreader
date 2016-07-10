@@ -29,15 +29,13 @@ $(function() {
 
          it('should have defined and not empty URLS', function() {
             allFeeds.forEach(function(feed) {
-                expect(feed.url).toBeDefined();
-                expect(feed.url).not.toBe('');
+                expect(feed.url).toBeTruthy();
             });
          });
 
          it('should have feed names that are defined and not empty', function() {
             allFeeds.forEach(function(feed) {
-                expect(feed.name).toBeDefined();
-                expect(feed.name).not.toBe('');
+                expect(feed.name).toBeTruthy();
             });
          });
     });
@@ -82,9 +80,8 @@ $(function() {
             });
         });
 
-        it('changes its loaded content', function(done) {
+        it('changes its loaded content', function() {
             expect(htmlAfterFirstFeed).not.toBe(htmlAfterSecondFeed);
-            done();
         });
     })
 }());
