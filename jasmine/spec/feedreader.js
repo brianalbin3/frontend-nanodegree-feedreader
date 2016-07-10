@@ -9,7 +9,6 @@
  * to ensure they don't run until the DOM is ready.
  */
 $(function() {
-    setTimeout(function() {}, 8000);
     /* This is our first test suite - a test suite just contains
     * a related set of tests. This suite is all about the RSS
     * feeds definitions, the allFeeds variable in our application.
